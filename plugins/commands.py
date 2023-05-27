@@ -29,7 +29,7 @@ SUB_PHOTO = [
   "https://telegra.ph/file/88276e1ba1b1aaa8d374f.jpg"
 ]
 
-@Client.on_message(filters.command("start"))
+@Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
     
     Out = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
