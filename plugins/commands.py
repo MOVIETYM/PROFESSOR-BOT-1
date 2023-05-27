@@ -18,15 +18,36 @@ logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
 
-@Client.on_message(filters.command("start") & filters.incoming)
+ALL_PIC = [
+  "https://telegra.ph/file/f844db93d336c13894d5e.jpg",
+  "https://telegra.ph/file/69e16ce80ffacd0f2b588.jpg"
+]
+
+SUB_PHOTO = [
+  "https://telegra.ph/file/c0814442ed2c9e121730a.jpg",
+  "https://telegra.ph/file/4e658f448e056949853db.jpg",
+  "https://telegra.ph/file/88276e1ba1b1aaa8d374f.jpg"
+]
+
+@Client.on_message(filters.command("start"))
 async def start(client, message):
+    
+    Out = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+
+    Time = Out.hour
+    if Time < 12:
+        get="GOOD MORNING"
+    elif Time < 16:
+          get="GOOD AFTERNOON"
+    elif Time < 20:
+          get="GOOD EVENING"
+    else:
+        get="GOOD EVENING"
+        
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        buttons = [[           
-            InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢', url=f'https://t.me/{SUPPORT_CHAT}')
-            ],[
-            InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿 ℹ️', url=f"https://t.me/{temp.U_NAME}?start=help")
-            ]]
-        await message.reply(START_MESSAGE.format(user=message.from_user.mention if message.from_user else message.chat.title, bot=temp.B_LINK), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)                    
+        await message.reply_photo(
+            photo=random.choice(ALL_PIC),
+            caption=f"""HI {get} {message.from_user.mention} HOW ARE YOU ?""",reply_markup=reply_markup)                  
         await asyncio.sleep(2) 
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
