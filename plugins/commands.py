@@ -29,25 +29,16 @@ SUB_PHOTO = [
   "https://telegra.ph/file/88276e1ba1b1aaa8d374f.jpg"
 ]
 
+
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
-    
-    Out = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
-
-    Time = Out.hour
-    if Time < 12:
-        get="GOOD MORNING"
-    elif Time < 16:
-          get="GOOD AFTERNOON"
-    elif Time < 20:
-          get="GOOD EVENING"
-    else:
-        get="GOOD EVENING"
-        
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        await message.reply_photo(
-            photo=random.choice(ALL_PIC),
-            caption=f"""HI {get} {message.from_user.mention} HOW ARE YOU ?""",reply_markup=reply_markup)                  
+        buttons = [[           
+            InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢', url=f'https://t.me/{SUPPORT_CHAT}')
+            ],[
+            InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿 ℹ️', url=f"https://t.me/{temp.U_NAME}?start=help")
+            ]]
+        await message.reply(START_MESSAGE.format(user=message.from_user.mention if message.from_user else message.chat.title, bot=temp.B_LINK), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)                              
         await asyncio.sleep(2) 
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
