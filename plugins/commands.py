@@ -19,8 +19,9 @@ logger = logging.getLogger(__name__)
 BATCH_FILES = {}
 
 ALL_PIC = [
-  "https://telegra.ph/file/f844db93d336c13894d5e.jpg",
-  "https://telegra.ph/file/69e16ce80ffacd0f2b588.jpg"
+  "https://graph.org/file/e4bc75bf3b93035402631.jpg",
+  "https://graph.org/file/b1fc4aef4f2cbdbb26967.jpg",
+  "https://graph.org/file/d3959b33b430534b163db.jpg"
 ]
 
 SUB_PHOTO = [
