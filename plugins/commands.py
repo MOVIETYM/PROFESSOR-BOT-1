@@ -14,6 +14,8 @@ from database.connections_mdb import active_connection
 import re
 import json
 import base64
+import datetime
+import pytz
 logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
@@ -31,30 +33,15 @@ SUB_PHOTO = [
 ]
 
 
-@Client.on_message(filters.command("start"))
+@Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
-  
-    Out = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
-
-    Time = Out.hour
-    if Time < 12:
-        get="GOOD MORNING"
-    elif Time < 16:
-          get="GOOD AFTERNOON"
-    elif Time < 20:
-          get="GOOD EVENING"
-    else:
-        get="GOOD EVENING"
-        
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[           
             InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢', url=f'https://t.me/{SUPPORT_CHAT}')
             ],[
             InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿 ℹ️', url=f"https://t.me/{temp.U_NAME}?start=help")
             ]]
-        await message.reply_photo(
-            photo=random.choice(ALL_PIC),
-            caption=f"""HI {get} {message.from_user.mention} HOW ARE YOU ?""",reply_markup=reply_markup)   
+        await message.reply(START_MESSAGE.format(user=message.from_user.mention if message.from_user else message.chat.title, bot=temp.B_LINK), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)                    
         await asyncio.sleep(2) 
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
@@ -105,22 +92,33 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
                 btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
-        await client.send_message(
+                
+        Out = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+        Time = Out.hour
+        if Time < 12:
+            get="GOOD MORNING"
+        elif Time < 16:
+              get="GOOD AFTERNOON"
+        elif Time < 20:
+              get="GOOD EVENING"
+        else:
+            get="GOOD EVENING"
+            
+        await client.send_photo(
+            photo=random.choice(SUB_PHOTO),
+            caption=f"""**Hi {get} PLEASE JOIN OUR CHANNEL TO USE THE BOT!..\n\nഞങ്ങളുടെ ചാനലിൽ ജോയിൻ ചെയ്താൽ മാത്രമേ ബോട്ട് ഉപയോഗിക്കാൻ പറ്റുകയുള്ളു!...**""",
             chat_id=message.from_user.id,
-            text=FORCE_SUB_TEXT,
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.DEFAULT
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton("➕️ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕️", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
-            ],[
-            InlineKeyboardButton("🔍 𝚂𝙴𝙰𝚁𝙲𝙷 🔍", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="https://t.me/mkn_bots_updates")
-            ],[      
-            InlineKeyboardButton("ℹ️ 𝙷𝙴𝙻𝙿 ℹ️", callback_data="help"),
-            InlineKeyboardButton("💫 𝙰𝙱𝙾𝚄𝚃 💫", callback_data="about")
+            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('ℹ️ Help', callback_data='help')
+        ], [
+            InlineKeyboardButton('😊 About', callback_data='about'),
+            InlineKeyboardButton("🔐CLOSE", callback_data="close_data")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
