@@ -1,13 +1,13 @@
 class script(object):   
-    HELP_TXT = """𝙷𝙴𝚈 {}\n𝙷𝙴𝚁𝙴 𝙸𝚂 𝙼𝚈 𝙷𝙴𝙻𝙿 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
+    HELP_TXT = """HEY {}\nHERE IS MY HELP COMMANDS."""
 
-    ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴 : {}
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁 : <a href=https://t.me/mr_MKN>𝙈𝙧.𝙈𝙆𝙉 𝙏𝙂</a>
-✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈 : 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
-✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴 : 𝙼𝙾𝙽𝙶𝙾-𝙳𝙱
-✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁 : 𝙰𝙽𝚈𝚆𝙷𝙴𝚁𝙴
-✯ 𝙱𝚄𝙸𝙻𝙳 𝚅𝙴𝚁𝚂𝙸𝙾𝙽: 𝙿𝚁𝙾𝙵𝙴𝚂𝚂𝙾𝚁-𝙱𝙾𝚃 𝚟3.0.0"""
+    ABOUT_TXT = """✯𝙈𝙔 𝙉𝘼𝙈𝙀: {}
+✯ CHANNEL:<a href=https://t.me/matinee_cinema>ɱαƭเɳεε ૮เɳεɱα</a>
+✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: ᴘʏʀᴏɢʀᴀᴍ
+✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: ᴘʏᴛʜᴏɴ 3
+✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: ᴍᴀɴɢᴏ ᴅʙ
+✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: ʀᴇɴᴅᴇʀ
+✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: ᴠ1.0.3 [ 𝙱𝙴𝚃𝙰 ] """
 
     SOURCE_TXT = """<b>NOTE:</b>
 - 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴 𝙲𝙻𝙸𝙲𝙺 𝙷𝙴𝚁 👉 :<a href=https://github.com/MrMKN/PROFESSOR-BOT>𝐏𝐑𝐎𝐅𝐄𝐒𝐒𝐎𝐑-𝐁𝐎𝐓</a>
@@ -337,6 +337,27 @@ Delete A Lot Of Messages From Groups!
 <code>/song mkn</code>
 <code>/mp4 https://youtu.be/*******</code>
 <code>/video https://youtu.be/*****</code>  """
+
+  SONG_TXT = """<b>🎶SONG DOWNLOAD MODULE🎶</b>
+    
+🎶 Song download module,Helps to download your favourite song.Try it..🎶
+
+<b>COMMANDS</b>
+
+››  /song SONG NAME
+›› Eg: <code>/song starboy</code>
+NOTE:- WORKS ONLY BOTH PM🎶"""
+
+   VIDEO_TXT ="""𝙷𝙴𝙻𝙿 𝚈𝙾𝚄 𝚃𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚅𝙸𝙳𝙴𝙾 𝙵𝚁𝙾𝙼 𝚈𝙾𝚄𝚃𝚄𝙱𝙴.
+• 𝘜𝘴𝘢𝘨𝘦
+𝘠𝘰𝘶 𝘊𝘢𝘯 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘈𝘯𝘺 𝘝𝘪𝘥𝘦𝘰 𝘍𝘳𝘰𝘮 𝘠𝘰𝘶𝘵𝘶𝘣𝘦
+𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚
+• 𝘛𝘺𝘱𝘦 /video or /mp4 𝘈𝘯𝘥 (https://youtu.be/fQOjh-mmNKo)
+• 𝘛𝘺𝘱𝘦 /video video name 
+• 𝘌𝘹𝘢𝘮𝘱𝘭𝘦:
+/video kgf malayalam trailer
+<code>/video https://youtu.be/fQOjh-mmNKo</code>
+NOTE - Works on both pm and group"""
 
 
     
