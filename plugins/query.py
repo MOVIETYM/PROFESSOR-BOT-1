@@ -639,6 +639,29 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.YTDL, enums.ParseMode.HTML),            
             reply_markup=reply_markup,
         )  
+        
+    elif query.data == "songs":
+        buttons = [[
+            InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='help')
+            ],[
+            InlineKeyboardButton('🔒CLOSE', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.edit_message_media(
+            InputMediaPhoto(random.choice(PICS), script.SONG_TXT, enums.ParseMode.HTML),            
+            reply_markup=reply_markup,
+        )    
+    elif query.data == "video":
+        buttons = [[
+            InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='help')
+            ],[
+            InlineKeyboardButton('🔒CLOSE', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.edit_message_media(
+            InputMediaPhoto(random.choice(PICS), script.VIDEO_TXT, enums.ParseMode.HTML),            
+            reply_markup=reply_markup,
+        )     
     elif query.data == "sharetxt":
         buttons = [[
             InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='help')
