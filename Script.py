@@ -357,7 +357,7 @@ NOTE:- WORKS ONLY BOTH PM🎶"""
 • 𝘌𝘹𝘢𝘮𝘱𝘭𝘦:
 /video kgf malayalam trailer
 <code>/video https://youtu.be/fQOjh-mmNKo</code>
-NOTE - Works on both pm and group"""
+NOTE - Works on both pms and group"""
 
 
     
