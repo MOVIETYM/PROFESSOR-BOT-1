@@ -56,7 +56,7 @@ async def save_group(bot, message):
                                          caption=f"""<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>""",
                                          )
             
-  JOIN_PIC = [
+JOIN_PIC = [
   "https://telegra.ph/file/69e16ce80ffacd0f2b588.jpg"
 ]                 
 
