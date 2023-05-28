@@ -1,13 +1,13 @@
 class script(object):   
     HELP_TXT = """HEY {}\nHERE IS MY HELP COMMANDS."""
 
-    ABOUT_TXT = """✯𝙈𝙔 𝙉𝘼𝙈𝙀: {}
-✯ CHANNEL:<a href=https://t.me/matinee_cinema>ɱαƭเɳεε ૮เɳεɱα</a>
-✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: ᴘʏʀᴏɢʀᴀᴍ
-✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: ᴘʏᴛʜᴏɴ 3
-✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: ᴍᴀɴɢᴏ ᴅʙ
-✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: ʀᴇɴᴅᴇʀ
-✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: ᴠ1.0.3 [ 𝙱𝙴𝚃𝙰 ] """
+    ABOUT_TXT = """✯ MY NAME: {}
+✯ CHANNEL:<a href=https://t.me/matinee_cinema>MATINEE CINEMA</a>
+✯ LIBRARY: ᴘʏʀᴏɢʀᴀᴍ
+✯ LANGUAGE: ᴘʏᴛʜᴏɴ 3
+✯ DATA BASE: ᴍᴀɴɢᴏ ᴅʙ
+✯ BOT SERVER: ʀᴇɴᴅᴇʀ
+✯ BUILD STATUS: ᴠ1.0.3 [ 𝙱𝙴𝚃𝙰 ]"""
 
     SOURCE_TXT = """<b>NOTE:</b>
 - 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴 𝙲𝙻𝙸𝙲𝙺 𝙷𝙴𝚁 👉 :<a href=https://github.com/MrMKN/PROFESSOR-BOT>𝐏𝐑𝐎𝐅𝐄𝐒𝐒𝐎𝐑-𝐁𝐎𝐓</a>
