@@ -338,7 +338,7 @@ Delete A Lot Of Messages From Groups!
 <code>/mp4 https://youtu.be/*******</code>
 <code>/video https://youtu.be/*****</code>  """
 
-  SONG_TXT ="""<b>🎶SONG DOWNLOAD MODULE🎶</b>
+    SONG_TXT = """<b>🎶SONG DOWNLOAD MODULE🎶</b>
     
 🎶 Song download module,Helps to download your favourite song.Try it..🎶
 
@@ -346,7 +346,7 @@ Delete A Lot Of Messages From Groups!
 
 ››  /song SONG NAME
 ›› Eg: <code>/song starboy</code>
-NOTE:- WORKS ONLY BOTH PM🎶"""
+NOTE:- WORKS ONLY ON PM🎶"""
 
    VIDEO_TXT ="""𝙷𝙴𝙻𝙿 𝚈𝙾𝚄 𝚃𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚅𝙸𝙳𝙴𝙾 𝙵𝚁𝙾𝙼 𝚈𝙾𝚄𝚃𝚄𝙱𝙴.
 • 𝘜𝘴𝘢𝘨𝘦
