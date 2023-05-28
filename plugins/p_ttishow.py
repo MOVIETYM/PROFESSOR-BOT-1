@@ -51,11 +51,14 @@ async def save_group(bot, message):
                     await (temp.MELCOW['welcome']).delete()
                 except:
                     pass
-            if WELCOM_PIC:
-                temp.MELCOW['welcome'] = await message.reply_photo(photo=WELCOM_PIC, caption=WELCOM_TEXT.format(user=u.mention, chat=message.chat.title))
-            else:
-                temp.MELCOW['welcome'] = await message.reply_text(text=WELCOM_TEXT.format(user=u.mention, chat=message.chat.title))
-                    
+            temp.MELCOW['welcome'] = await message.reply_photo(
+                                         photo=random.choice(JOIN_PIC),
+                                         caption=f"""<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>""",
+                                         )
+            
+  JOIN_PIC = [
+  "https://telegra.ph/file/69e16ce80ffacd0f2b588.jpg"
+]                 
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
