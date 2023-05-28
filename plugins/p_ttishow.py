@@ -53,13 +53,10 @@ async def save_group(bot, message):
                     pass
             if WELCOM_PIC:
                 temp.MELCOW['welcome'] = await message.reply_photo(
-                                             photo=random.choice(JOIN_PIC),
+                                             photo=random.choice(PICS),
                                              caption=f"""<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>""",
                                              )
                     
-JOIN_PIC = [
-  "https://telegra.ph/file/69e16ce80ffacd0f2b588.jpg"
-]                         
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
