@@ -1,7 +1,7 @@
 class script(object):   
     HELP_TXT = """ʜᴇʏ {}\nʜᴇʀᴇ ɪꜱ ᴍʏ ʜᴇʟᴘ ᴄᴏᴍᴍᴀɴᴅꜱ."""
 
-    ABOUT_TXT = """✯ MY NAME: {}
+    ABOUT_TXT = """✯ 𝙈𝙔 𝙉𝘼𝙈𝙀 : {}
 ✯ 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 :<a href=https://t.me/matinee_cinema>ᴍᴀᴛɪɴᴇᴇ ᴄɪɴᴇᴍᴀ</a>
 ✯ 𝙇𝙄𝘽𝙍𝘼𝙍𝙔 : ᴘʏʀᴏɢʀᴀᴍ
 ✯ 𝙇𝘼𝙉𝙂𝙐𝘼𝙂𝙀 : ᴘʏᴛʜᴏɴ 3
