@@ -355,8 +355,8 @@ NOTE:- WORKS ONLY ON PM🎶"""
 • 𝘛𝘺𝘱𝘦 /video or /mp4 𝘈𝘯𝘥 (https://youtu.be/fQOjh-mmNKo)
 • 𝘛𝘺𝘱𝘦 /video video name 
 • 𝘌𝘹𝘢𝘮𝘱𝘭𝘦:
-/video kgf malayalam trailer
-<code>/video https://youtu.be/fQOjh-mmNKo</code>
+• /video kgf malayalam trailer
+• <code>/video https://youtu.be/fQOjh-mmNKo</code>
 NOTE - Works on both pms and group"""
 
 
